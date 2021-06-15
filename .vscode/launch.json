@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-CarRentalApplication<car-rental>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "dev.ikoinaris.carrental.CarRentalApplication",
+            "projectName": "car-rental",
+            "args": ""
+        }
+    ]
+}
