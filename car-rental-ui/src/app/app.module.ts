@@ -22,6 +22,9 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
+// Ngx modules
+import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @NgModule({
@@ -31,7 +34,8 @@ import { MatIconModule } from '@angular/material/icon';
     LoginComponent,
     HeaderComponent,
     CarRentComponent,
-    IntroComponent
+    IntroComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +52,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatDatepickerModule, MatNativeDateModule,
     MatSelectModule,
     MatCheckboxModule,
-    MatIconModule
+    MatIconModule,
+    NgxMaterialTimepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
