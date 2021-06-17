@@ -6,7 +6,7 @@ import { Extra } from './extra';
 @Injectable({
   providedIn: 'root'
 })
-export class ExtraServiceService {
+export class ExtraService {
 
   private extrasUrl: string;
 

@@ -6,7 +6,7 @@ import { Location } from './location';
 @Injectable({
   providedIn: 'root'
 })
-export class LocationServiceService {
+export class LocationService {
 
   private locationsUrl: string;
 
