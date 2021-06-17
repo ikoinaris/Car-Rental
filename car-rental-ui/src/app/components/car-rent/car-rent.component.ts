@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { GEAR_SYSTEM } from 'src/app/models/gear-system';
+import { VEHICLE_TYPES } from 'src/app/models/vehicle-types';
 
 interface Food {
   value: string;
@@ -12,6 +14,9 @@ interface Food {
   styleUrls: ['./car-rent.component.css']
 })
 export class CarRentComponent implements OnInit {
+
+  vehicleTypes = VEHICLE_TYPES;
+  gearSystem = GEAR_SYSTEM;
 
   isLinear = false;
   firstFormGroup: FormGroup;

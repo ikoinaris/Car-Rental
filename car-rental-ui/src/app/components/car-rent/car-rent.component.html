@@ -5,21 +5,23 @@
         <form [formGroup]="firstFormGroup">
           <ng-template matStepLabel>Choose vehicle type</ng-template>
           <mat-form-field appearance="fill">
-            <mat-label>Favorite food</mat-label>
+            <mat-label>Type</mat-label>
             <mat-select>
-              <mat-option *ngFor="let food of foods" [value]="food.value">
-                {{food.viewValue}}
+              <mat-option *ngFor="let type of vehicleTypes" [value] = "type.value">
+                {{type.value}}
               </mat-option>
             </mat-select>
           </mat-form-field>
-          <mat-form-field appearance="fill">
-            <mat-label>Favorite food</mat-label>
-            <mat-select>
-              <mat-option *ngFor="let food of foods" [value]="food.value">
-                {{food.viewValue}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Gear System</mat-label>
+              <mat-select>
+                <mat-option *ngFor="let system of gearSystem" [value]="system.value">
+                  {{system.value}}
+                </mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
           <div>
             <button mat-button matStepperNext>Next</button>
           </div>
