@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import dev.ikoinaris.carrental.entity.Vehicle;
@@ -18,6 +20,11 @@ public class VehicleController {
     @GetMapping("/vehicles")
     public List<Vehicle> getAllVehicles() {
         return vehicleRepository.findAll();
+    }
+
+    @PostMapping("/vehicles")
+    public Vehicle saveVehicle(@PathVariable Vehicle vehicle) {
+        return vehicleRepository.save(vehicle);
     }
     
 }
