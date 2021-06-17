@@ -22,6 +22,9 @@ public class Vehicle {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Column(name = "title")
+    private String title;
+
     @Column(name = "type")
     private String type;
 
