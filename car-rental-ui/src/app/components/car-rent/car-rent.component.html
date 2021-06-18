@@ -42,7 +42,8 @@
             </mat-form-field>
           <div class="example-button-row">
             <button mat-button matStepperPrevious>Back</button>
-            <button mat-button matStepperNext>Next</button>
+          <button mat-button matStepperNext>Next</button>
+          <button mat-button (click)="stepper.reset()">Reset</button>
           </div>
         </form>
       </mat-step>
@@ -75,8 +76,8 @@
           </section>
         </div>
         <div class="example-button-row">
-          <button mat-button matStepperNext>Next</button>
           <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
           <button mat-button (click)="stepper.reset()">Reset</button>
         </div>
       </mat-step>
@@ -86,8 +87,8 @@
           <mat-checkbox class="example-margin">{{extra.name}}, {{extra.dailyPrice}} € /day</mat-checkbox>
         </section>
         <div class="example-button-row">
-          <button mat-button matStepperNext>Next</button>
           <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
           <button mat-button (click)="stepper.reset()">Reset</button>
         </div>
       </mat-step>
@@ -96,6 +97,7 @@
         <p>You are now done.</p>
         <div class="example-button-row">
           <button mat-flat-button color="primary" matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Procceed</button>
           <button mat-flat-button color="warn" (click)="stepper.reset()">Reset</button>
         </div>
       </mat-step>
