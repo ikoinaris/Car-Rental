@@ -25,6 +25,7 @@ import { MatIconModule } from '@angular/material/icon';
 // Ngx modules
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { FooterComponent } from './components/footer/footer.component';
+import { CarRent2Component } from './components/car-rent2/car-rent2.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HeaderComponent,
     CarRentComponent,
     IntroComponent,
-    FooterComponent
+    FooterComponent,
+    CarRent2Component
   ],
   imports: [
     BrowserModule,

@@ -5,11 +5,6 @@ import { VEHICLE_TYPES } from 'src/app/models/vehicle-types';
 import { ExtraService } from 'src/app/services/extra.service';
 import { LocationService } from 'src/app/services/location.service';
 
-interface Food {
-  value: string;
-  viewValue: string;
-}
-
 @Component({
   selector: 'app-car-rent',
   templateUrl: './car-rent.component.html',
@@ -23,27 +18,16 @@ export class CarRentComponent implements OnInit {
   extras: any;
 
   isLinear = false;
-  firstFormGroup: FormGroup;
-  secondFormGroup: FormGroup;
+  rentcar: FormGroup;
   checked = false;
 
-  foods: Food[] = [
-    {value: 'steak-0', viewValue: 'Steak'},
-    {value: 'pizza-1', viewValue: 'Pizza'},
-    {value: 'tacos-2', viewValue: 'Tacos'}
-  ];
-
-  constructor(private _formBuilder: FormBuilder,
+  constructor(private formBuilder: FormBuilder,
               private locationService: LocationService,
               private extrasService : ExtraService) {
 
-    this.firstFormGroup = this._formBuilder.group({
+    this.rentcar = this.formBuilder.group({
       firstCtrl: ['', Validators.required]
     });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
-    });
-
   }
 
   ngOnInit(): void {
@@ -56,11 +40,8 @@ export class CarRentComponent implements OnInit {
       this.extras = data;
     });
 
-    this.firstFormGroup = this._formBuilder.group({
+    this.rentcar = this.formBuilder.group({
       firstCtrl: ['', Validators.required]
-    });
-    this.secondFormGroup = this._formBuilder.group({
-      secondCtrl: ['', Validators.required]
     });
   }
 
