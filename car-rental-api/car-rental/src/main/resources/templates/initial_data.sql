@@ -8,9 +8,9 @@ INSERT INTO location (id, name) VALUES (5, 'City Hall');
 
 /* empty and initialize table extra */
 TRUNCATE TABLE extras;
-INSERT INTO extras (id, name, img_url, daily_price) VALUES (1, 'Steal insurance', 'url', 10);
-INSERT INTO extras (id, name, img_url, daily_price) VALUES (2, 'Baby sit', 'url', 15);
-INSERT INTO extras (id, name, img_url, daily_price) VALUES (3, 'GPS', 'url', 20);
+INSERT INTO extras (id, name, img_url, daily_price, rental_id) VALUES (1, 'Steal insurance', 'url', 10, null);
+INSERT INTO extras (id, name, img_url, daily_price, rental_id) VALUES (2, 'Baby sit', 'url', 15, null);
+INSERT INTO extras (id, name, img_url, daily_price, rental_id) VALUES (3, 'GPS', 'url', 20, null);
 
 /* empty and initialize table vehicle */
 TRUNCATE TABLE vehicle;
