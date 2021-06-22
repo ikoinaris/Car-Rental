@@ -31,7 +31,7 @@ export class RegisterComponent implements OnInit {
     this.isSubmitted = true;
     if ( this.registerForm.invalid ) { return; }
     this.authService.login(this.registerForm.value);
-    this.router.navigateByUrl('/car-rental')
+    this.router.navigateByUrl('/rent-a-car')
   }
 
 }
