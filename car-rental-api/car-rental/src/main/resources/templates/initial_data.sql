@@ -12,8 +12,11 @@ INSERT INTO extras (id, name, img_url, daily_price, rental_id) VALUES (1, 'Steal
 INSERT INTO extras (id, name, img_url, daily_price, rental_id) VALUES (2, 'Baby sit', 'url', 15, null);
 INSERT INTO extras (id, name, img_url, daily_price, rental_id) VALUES (3, 'GPS', 'url', 20, null);
 
-/* empty and initialize table vehicle */
+/* initialize table vehicle */
 INSERT INTO vehicle (id, title, daily_price, img_url, type, gear_system) VALUES (1, 'title1', 19, 'url', 'Sedan', 'Manual');
 INSERT INTO vehicle (id, title, daily_price, img_url, type, gear_system) VALUES (2, 'title2', 25, 'url', 'Sedan', 'Auto');
 INSERT INTO vehicle (id, title, daily_price, img_url, type, gear_system) VALUES (3, 'title3', 28, 'url', 'Sedan', 'Manual');
 INSERT INTO vehicle (id, title, daily_price, img_url, type, gear_system) VALUES (4, 'title4', 33, 'url', 'Sedan', 'Auto');
+
+/* initialize table rental */
+INSERT INTO rental(id, check_out_date, drop_off_location, pickUDate, pick_up_location, vehicle_id) VALUES (1, TO_DATE('17/07/2021', 'DD/MM/YYYY'), 'Airport', TO_DATE('20/07/2021', 'DD/MM/YYYY'), 'Airport', 2);
