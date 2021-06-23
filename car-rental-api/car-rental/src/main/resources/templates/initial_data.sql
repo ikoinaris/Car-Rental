@@ -13,8 +13,7 @@ INSERT INTO extras (id, name, img_url, daily_price, rental_id) VALUES (2, 'Baby 
 INSERT INTO extras (id, name, img_url, daily_price, rental_id) VALUES (3, 'GPS', 'url', 20, null);
 
 /* empty and initialize table vehicle */
-TRUNCATE TABLE vehicle;
-INSERT INTO vehicle (id, title, daily_price, img_url, type) VALUES (1, 'title1', 19, 'url', 'Sedan');
-INSERT INTO vehicle (id, title, daily_price, img_url, type) VALUES (2, 'title2', 25, 'url', 'Sedan');
-INSERT INTO vehicle (id, title, daily_price, img_url, type) VALUES (3, 'title3', 28, 'url', 'Sedan');
-INSERT INTO vehicle (id, title, daily_price, img_url, type) VALUES (4, 'title4', 33, 'url', 'Sedan');
+INSERT INTO vehicle (id, title, daily_price, img_url, type, gear_system) VALUES (1, 'title1', 19, 'url', 'Sedan', 'Manual');
+INSERT INTO vehicle (id, title, daily_price, img_url, type, gear_system) VALUES (2, 'title2', 25, 'url', 'Sedan', 'Auto');
+INSERT INTO vehicle (id, title, daily_price, img_url, type, gear_system) VALUES (3, 'title3', 28, 'url', 'Sedan', 'Manual');
+INSERT INTO vehicle (id, title, daily_price, img_url, type, gear_system) VALUES (4, 'title4', 33, 'url', 'Sedan', 'Auto');

@@ -1,7 +1,7 @@
 package dev.ikoinaris.carrental.entity;
 
 import java.util.Date;
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -45,6 +45,6 @@ public class Rental {
     private String dropOffLocation;
 
     @OneToMany(mappedBy = "rental")
-    private List<Extra> extras;
+    private Set<Extra> extras;
     
 }

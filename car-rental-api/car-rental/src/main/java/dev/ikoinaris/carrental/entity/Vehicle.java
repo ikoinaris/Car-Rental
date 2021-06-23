@@ -29,6 +29,9 @@ public class Vehicle {
     @Column(name = "type")
     private String type;
 
+    @Column(name = "gearSystem")
+    private String gearSystem;
+
     @Column(name = "img_url")
     private String img_url;
 
