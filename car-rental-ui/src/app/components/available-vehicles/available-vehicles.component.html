@@ -1,0 +1,18 @@
+<div *ngFor="let car in availableCars">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{car.title}}</mat-card-title>
+      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{car.img_url}} alt="image">
+    <mat-card-content>
+      <p> Vehicle Details: </p>
+      <h5>{{car.type}}</h5>
+      <h5>{{car.gearSystem}}</h5>
+      <h5>{{car.dailyPrice}}</h5>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Select</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

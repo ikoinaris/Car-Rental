@@ -22,10 +22,12 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
+import { MatCardModule } from '@angular/material/card';
 // Ngx modules
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { FooterComponent } from './components/footer/footer.component';
 import { CarRent2Component } from './components/car-rent2/car-rent2.component';
+import { AvailableVehiclesComponent } from './components/available-vehicles/available-vehicles.component';
 
 
 @NgModule({
@@ -37,7 +39,8 @@ import { CarRent2Component } from './components/car-rent2/car-rent2.component';
     CarRentComponent,
     IntroComponent,
     FooterComponent,
-    CarRent2Component
+    CarRent2Component,
+    AvailableVehiclesComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +59,7 @@ import { CarRent2Component } from './components/car-rent2/car-rent2.component';
     MatSelectModule,
     MatCheckboxModule,
     MatIconModule,
+    MatCardModule,
     NgxMaterialTimepickerModule
   ],
   providers: [],
