@@ -26,8 +26,7 @@ export class CarRentComponent implements OnInit {
   locations : any;
   extras: any;
   avalableCars: AvailableCars[];
-  isLinear = false;
-  rentcar: FormGroup;
+  rentcarForm: FormGroup;
   checked = false;
 
   constructor(private router: Router,
@@ -36,8 +35,13 @@ export class CarRentComponent implements OnInit {
               private extrasService : ExtraService,
               private availableVehicles : AvailableCarsService) {
 
-    this.rentcar = this.formBuilder.group({
-      firstCtrl: ['', Validators.required]
+    this.rentcarForm = this.formBuilder.group({
+      type: ['', Validators.required],
+      gear: ['', Validators.required],
+      startDate: ['', Validators.required],
+      endDate: ['', Validators.required],
+      pickUpLocation: ['', Validators.required],
+      returnLocation: ['', Validators.required]
     });
 
     this.avalableCars = [];
@@ -53,10 +57,17 @@ export class CarRentComponent implements OnInit {
       this.extras = data;
     });
 
-    this.rentcar = this.formBuilder.group({
-      firstCtrl: ['', Validators.required]
+    this.rentcarForm = this.formBuilder.group({
+      type: ['', Validators.required],
+      gear: ['', Validators.required],
+      startDate: ['', Validators.required],
+      endDate: ['', Validators.required],
+      pickUpLocation: ['', Validators.required],
+      returnLocation: ['', Validators.required]
     });
   }
+
+  get formControls() { return this.rentcarForm.value; }
 
   onProcceed() {
     let params = new HttpParams();
